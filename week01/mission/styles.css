@@ -1,14 +1,12 @@
-/* General body styling */
 body {
     font-family: "Times New Roman", Times, serif;
     font-size: 20px;
-    margin: 30;
+    margin: 30px;
     padding: 0;
     background-color: white;
     text-align: center;
     line-height: 1.5;
 }
-
 
 .content {
     max-width: 600px;
@@ -17,7 +15,6 @@ body {
     text-align: left;
     border: 1px solid #d4d4d4;
 }
-
 
 header {
     margin-bottom: 20px;
@@ -39,21 +36,27 @@ header h2 {
     border-bottom: 1px solid #d4d4d4;
 }
 
-
 p {
     margin-bottom: 20px;
 }
-
 
 .logo {
     width: 150px;
     display: block;
     margin: 0 auto 20px;
-
 }
 
 .subtitle {
     color: #006EB6;
     font-size: 1.5rem;
     letter-spacing: 1px;
+}
+
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+body.dark h2 {
+    color: #B0D5F1;
 }
