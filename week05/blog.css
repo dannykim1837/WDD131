@@ -1,0 +1,90 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #473144;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #473144;
+    margin: 20px 0;
+}
+
+nav ul {
+    display: grid;
+    border-top: 1px solid #EFC69B;
+    border-bottom: 1px solid #EFC69B;
+    grid-template-columns: repeat(3, auto);
+    justify-content: end;
+    list-style-type: none;
+    padding: auto;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #AF1B3F;
+    font-size: 1.2rem;
+    padding: 15px 0;
+}
+
+
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.blog-posts {
+    display: grid;
+    gap: 40px;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding-bottom: 20px;
+}
+
+.details {
+    color: #AF1B3F;
+    font-size: 0.9rem;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.content h2 {
+    color: #AF1B3F;
+}
+
+.content img {
+    width: 150px;
+    display: block;
+    margin: 0 0 20px 0;
+}
+
+.content p {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.filters {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+a {
+    color: #AF1B3F;
+    text-decoration: none;
+}
