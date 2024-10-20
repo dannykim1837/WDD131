@@ -2,7 +2,6 @@ body {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
     color: #473144;
 }
 
@@ -17,7 +16,6 @@ h1 {
 nav {
     display: flex;
     justify-content: flex-end;
-    padding: 10px 0;
     border-top: 1px solid #EFC69B;
     border-bottom: 1px solid #EFC69B;
 }
