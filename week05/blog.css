@@ -18,6 +18,8 @@ nav {
     justify-content: flex-end;
     border-top: 1px solid #EFC69B;
     border-bottom: 1px solid #EFC69B;
+    margin: 0 auto;
+    padding-right: 30px;
 }
 
 nav ul {
@@ -45,13 +47,12 @@ main {
     grid-template-columns: 3fr 1fr;
     gap: 20px;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 10px auto;
     padding: 0 20px;
 }
 
 .blog-posts {
     display: grid;
-    gap: 40px;
 }
 
 article {
@@ -61,30 +62,41 @@ article {
 }
 
 .details {
-    color: #AF1B3F;
-    font-size: 0.9rem;
-    text-align: left;
+    font-size: 1.2rem;
+    text-align: right;
     margin-right: 20px;
+    border-right: 1px solid #EFC69B;
+    padding: 10px;
 }
 
 .content h2 {
+    text-align: left;
     color: #AF1B3F;
+    font-size: 2rem;
+}
+
+.content {
+    text-align: center;
 }
 
 .content img {
-    width: 150px;
-    display: block;
+    max-width: 100%;
+    height: auto;
     margin: 0 0 20px 0;
+    /* display: block; */
 }
 
 .content p {
-    margin: 10px 0;
+    margin: 10px auto;
     text-align: left;
+    font-size: 1.3rem;
 }
 
 .filters {
     font-size: 1.2rem;
     text-align: left;
+    padding: 10px;
+    border: #EFC69B solid;
 }
 
 a {
@@ -106,4 +118,8 @@ a {
 .skiptocontent a:focus {
     top: 0;
     outline: none;
+}
+
+footer {
+    text-align: center;
 }
