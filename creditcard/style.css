@@ -1,0 +1,195 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+
+body {
+    font-family: lato, 'helvetica-light';
+    position: relative;
+    text-transform: uppercase;
+    padding: 20px 0;
+    background-color: white;
+}
+
+#form-container {
+    margin: auto;
+    width: 500px;
+    height: 290px;
+    position: relative;
+}
+
+
+
+#card-front,
+#card-back {
+    position: absolute;
+    background-color: #e0e0e0;
+    width: 390px;
+    height: 250px;
+    border-radius: 6px;
+    padding: 30px 30px 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#card-front {
+    z-index: 1;
+}
+
+#card-back {
+    top: 40px;
+    right: 0;
+    z-index: -2;
+}
+
+.amount-image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#amount {
+    font-size: 12px;
+    color: black;
+}
+
+#amount strong {
+    font-size: 14px;
+}
+
+#image-container img {
+    height: 50px;
+    width: 100%;
+}
+
+.holder-exp-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+
+}
+
+#cardholder-container {
+    width: 60%;
+    display: inline-block;
+}
+
+#exp-container {
+    margin-left: 10px;
+    width: 32%;
+    display: inline-block;
+}
+
+#card-number,
+#card-holder {
+    width: 100%;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: #fff;
+    color: black;
+}
+
+
+#card-month,
+#card-year,
+#card-cvc {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+    border-radius: 4px;
+    font-family: lato, 'helvetica-light', 'sans-serif';
+    letter-spacing: .7px;
+    box-sizing: border-box;
+}
+
+#card-number {
+    width: 100%;
+}
+
+#card-month,
+#card-year {
+    width: 48%;
+}
+
+#card-stripe {
+    width: 100%;
+    height: 55px;
+    background-color: black;
+    position: absolute;
+    right: 0;
+}
+
+#cvc-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: left;
+}
+
+#cvc-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+#card-cvc {
+    width: 55px; 
+}
+#card-btn {
+    background-color: #f8f8f8;
+    color: #333;
+    position: absolute;
+    bottom: -55px;
+    right: 0;
+    width: 100px;
+    border-radius: 8px;
+    height: 42px;
+    font-size: 12px;
+    font-family: lato, 'helvetica-light', 'sans-serif';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    outline: none;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#card-btn:hover {
+    background-color: #e0e0e0;
+}
+
+label {
+    display: block;
+    margin: 0 auto 7px;
+    padding-top: 10px;
+}
+
+input {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    margin: 0 0 15px;
+    color: black;
+    font-size: 12px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: lato, 'helvetica-light', 'sans-serif';
+    letter-spacing: .7px;
+}
+
+input::-webkit-input-placeholder {
+    color: black;
+    opacity: 0.7;
+    font-weight: 300;
+}
+
+input.invalid {
+    border: solid 2px #eb0000;
+    height: 34px;
+}
