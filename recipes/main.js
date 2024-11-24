@@ -34,6 +34,50 @@ function displaySingleRecipe(recipe) {
     recipeSection.appendChild(article);
 }
 
-// Display a random recipe
-const randomIndex = Math.floor(Math.random() * recipes.length);
-displaySingleRecipe(recipes[randomIndex]);
+// Function to render multiple recipes
+function renderRecipes(recipeList) {
+    recipeSection.innerHTML = ''; // Clear previous content
+    recipeList.forEach(recipe => displaySingleRecipe(recipe));
+}
+
+// Function to handle search and filter recipes
+function filterRecipes(query) {
+    const lowerQuery = query.toLowerCase();
+    return recipes.filter(recipe =>
+        recipe.name.toLowerCase().includes(lowerQuery) ||
+        recipe.description.toLowerCase().includes(lowerQuery) ||
+        recipe.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
+    );
+}
+
+// Function to handle search input and display filtered recipes
+function searchHandler(event) {
+    event.preventDefault(); // Prevent form submission/reloading
+    const searchInput = document.querySelector('.search-form input');
+    const query = searchInput.value.trim();
+
+    if (query) {
+        const filteredRecipes = filterRecipes(query);
+        renderRecipes(filteredRecipes.length ? filteredRecipes : [{ name: 'No Recipes Found', tags: [], rating: 0, description: 'No recipes match your search.', image: '' }]);
+    } else {
+        // If search is empty, show a random recipe
+        displayRandomRecipe();
+    }
+}
+
+// Function to display a random recipe
+function displayRandomRecipe() {
+    const randomIndex = Math.floor(Math.random() * recipes.length);
+    displaySingleRecipe(recipes[randomIndex]);
+}
+
+// Initialize the page with a random recipe
+function init() {
+    displayRandomRecipe();
+    // Attach search functionality
+    const searchButton = document.querySelector('.search-form button');
+    searchButton.addEventListener('click', searchHandler);
+}
+
+// Initialize the application
+init();
