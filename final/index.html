@@ -8,12 +8,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
     <title>Weather Forecast</title>
     <script src="https://kit.fontawesome.com/b65545229f.js" crossorigin="anonymous"></script>
     <script src="main.js" defer></script>
 </head>
 
-<body>
+<body id="homePage">
     <nav class="navbar">
         <div class="navbar_logo">
             <img src="img/logo.png" alt="logo">
@@ -37,12 +40,59 @@
         </a>
     </nav>
 
-    <div class="container">
-        <h1>Search for Weather</h1>
-        <input type="text" id="cityInput" placeholder="Enter a city name">
-        <button id="searchButton">Search</button>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Weather Forecast</h1>
+            <p>Your go-to source for accurate weather updates</p>
+            <div class="search-bar">
+                <input type="text" id="cityInput" placeholder="Enter a city name">
+                <button id="searchButton">Search</button>
+            </div>
+        </div>
     </div>
+
+    <section class="weather-section">
+        <h2>Weather Information</h2>
+        <div class="weather-container">
+            <div class="weather-card" id="new-york">
+                <h3>New York</h3>
+                <p>Temperature: <span id="ny-temp">Loading...</span> °F</p>
+                <p>Wind Speed: <span id="ny-wind">Loading...</span> mph</p>
+                <p>Condition: <span id="ny-condition">Loading...</span></p>
+            </div>
+            <div class="weather-card" id="london">
+                <h3>London</h3>
+                <p>Temperature: <span id="ld-temp">Loading...</span> °F</p>
+                <p>Wind Speed: <span id="ld-wind">Loading...</span> mph</p>
+                <p>Condition: <span id="ld-condition">Loading...</span></p>
+            </div>
+            <div class="weather-card" id="seoul">
+                <h3>Seoul</h3>
+                <p>Temperature: <span id="sl-temp">Loading...</span> °F</p>
+                <p>Wind Speed: <span id="sl-wind">Loading...</span> mph</p>
+                <p>Condition: <span id="sl-condition">Loading...</span></p>
+            </div>
+            <div class="weather-card" id="sydney">
+                <h3>Sydney</h3>
+                <p>Temperature: <span id="sy-temp">Loading...</span> °F</p>
+                <p>Wind Speed: <span id="sy-wind">Loading...</span> mph</p>
+                <p>Condition: <span id="sy-condition">Loading...</span></p>
+            </div>
+            <div class="weather-card" id="berlin">
+                <h3>Berlin</h3>
+                <p>Temperature: <span id="bl-temp">Loading...</span> °F</p>
+                <p>Wind Speed: <span id="bl-wind">Loading...</span> mph</p>
+                <p>Condition: <span id="bl-condition">Loading...</span></p>
+            </div>
+        </div>
+    </section>
+    
+
     <script type="module" src="main.js"></script>
+
+    <footer class="footer">
+        <p>© 2024 Weather Forecast. All Rights Reserved.</p>
+    </footer>
 </body>
 
 </html>

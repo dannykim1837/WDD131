@@ -4,7 +4,7 @@ import pandas as pd
 # Function to get latitude and longitude for a city using OpenCage Geocoding API
 def get_coordinates(city_name):
     geocoding_api_url = "https://api.opencagedata.com/geocode/v1/json"
-    api_key = "YOUR_OPENCAGE_API_KEY"  # Replace with your OpenCage API key
+    api_key = "1298fa4155a34f8f8cce4c6018df122f"  # Replace with your OpenCage API key
     params = {
         "q": city_name,
         "key": api_key,
@@ -28,7 +28,7 @@ def get_weather_data(latitude, longitude):
         "longitude": longitude,
         "current_weather": "true",
         "hourly": "temperature_2m,precipitation,weather_code,visibility,wind_speed_10m,uv_index,is_day",
-        "daily": "weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset",
+	    "daily": "weather_code", "temperature_2m_max", "temperature_2m_min", "sunrise", "sunset", "precipitation_sum",
         "temperature_unit": "fahrenheit"
     }
     response = requests.get(weather_api_url, params=params)

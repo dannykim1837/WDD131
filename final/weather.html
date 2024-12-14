@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <title>Weather Forecast</title>
-    <script src="https://kit.fontawesome.com/b65545229f.js" crossorigin="anonymous"></script>
-    <script src="main.js" defer></script>
 </head>
 
-<body>
+<body id="weatherPage">
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="navbar_logo">
             <img src="img/logo.png" alt="logo">
@@ -31,16 +32,31 @@
             <li><i class="fa-brands fa-instagram"></i></li>
             <li><i class="fa-brands fa-twitter"></i></li>
         </ul>
-
-        <a href="#" class="navbar_toggleBtn">
-            <i class="fa-solid fa-list"></i>
-        </a>
     </nav>
-    <div class="container">
-        <h1>Weather Information</h1>
-        <div id="result">Loading...</div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="cityInput" placeholder="Enter a city name">
+        <button id="searchButton">Search</button>
     </div>
-    <script type="module" src="main.js"></script>
+
+    <!-- Main Content -->
+    <div class="container weather-container">
+        <div class="today-weather" id="todayWeather"></div>
+        <div class="weekly-weather" id="weeklyWeather"></div>
+    </div>
+
+    <!-- Detailed Info -->
+    <div class="container detailed-info-container">
+        <div class="detailed-info" id="detailedInfo"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Weather Forecast. All Rights Reserved.</p>
+    </footer>
+
+    <script type="module" src="js/weather.js"></script>
 </body>
 
 </html>
